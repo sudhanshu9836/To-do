@@ -4,8 +4,17 @@ add.innerText = "Add";
 add.classList.add('btn');
 document.querySelector('.l1').appendChild(add);
 
+//keyboard functionality for add button
+function handleKeyPress(event){
+    if(event.keyCode == 13){
+        add.click();
+    }
+}
+document.addEventListener('keypress', handleKeyPress);
+add.addEventListener("click", addButtonFunction);
+
 //adding event listener for add button
-add.addEventListener("click", function(){
+function addButtonFunction() {
     let inp = document.querySelector("#add");
     let task = document.createElement('div');
     task.classList.add("tasks");
@@ -28,7 +37,7 @@ add.addEventListener("click", function(){
     inp.value = "";
     task.style.display = "flex";
     task.style.justifyContent = "space-around"; 
-});
+};
 
 document.addEventListener("click",function(event){
      if (event.target.classList.contains("btn2")){
