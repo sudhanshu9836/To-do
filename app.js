@@ -13,6 +13,7 @@ function handleKeyPress(event){
 document.addEventListener('keypress', handleKeyPress);
 add.addEventListener("click", addButtonFunction);
 
+
 //adding event listener for add button
 function addButtonFunction() {
     let inp = document.querySelector("#add");

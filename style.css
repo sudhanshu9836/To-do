@@ -1,13 +1,17 @@
 *{
     background-color: #7dd6d9;
 }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .main{
     width: 600px;
     height: auto;
     border: 1px solid lightgray;
     background-color: white;
-    margin: auto;
-    margin-top: 75px;
+    margin-top: 60px;
 }
 .head{
     height: 40px;
@@ -28,7 +32,6 @@ h3{
     opacity: 0.7;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 }
 
@@ -79,4 +82,41 @@ h3{
     margin: 20px;
     position: relative;
     right: 20px;
+}
+
+/* Responsive web */
+
+@media screen and (max-width:600px){
+    .main{
+        transform: scale(0.8);
+        margin-top: -30px;
+    }
+    body{
+        overflow: hidden;
+    }
+    .tasks{
+        width: 80%;
+    }
+
+}
+@media screen and (max-width:450px){
+    .main{
+        transform: scale(0.6);
+    }
+
+}
+@media screen and (max-width:320px){
+    .main{
+        transform: scale(0.5);
+    }
+}
+@media screen and (max-width:260px){
+    .main{
+        transform: scale(0.4);
+    }
+}
+@media screen and (max-width:200px){
+    .main{
+        transform: scale(0.3);
+    }
 }
